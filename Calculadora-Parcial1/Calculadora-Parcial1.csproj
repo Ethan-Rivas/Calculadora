@@ -94,11 +94,5 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Resource Include="2020-09-10 20_59_18-Zoom Meeting.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="21587014_1659905090695291_7236681163558629016_o.jpg" />
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

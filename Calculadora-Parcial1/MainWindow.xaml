@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Calculadora_Parcial1"
         mc:Ignorable="d"
+        KeyDown="Calculator_KeyDown"
         Title="MainWindow" Height="581.287" Width="380" ResizeMode="NoResize" SizeToContent="WidthAndHeight" UseLayoutRounding="False" Padding="0,9,0,0" VerticalAlignment="Center" HorizontalAlignment="Center" Background="#FF0F1A21">
     <Window.Resources>
         <Style TargetType="Button">
@@ -62,15 +63,15 @@
         <Button x:Name="btn_dot" Content="." HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="197,367,0,0" Height="50" Foreground="#FF545C60" Background="#FF0F1A21" BorderThickness="0" FontSize="20" Click="BtnClick"/>
         <Button x:Name="btn_equal" Content="=" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="289,367,0,0" Height="50" Click="ButtonEqual" Foreground="#FF545C60" Background="#FF0F1A21" BorderThickness="0" FontSize="20"/>
         <Button x:Name="btn_pos_neg" Content="+/-" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="14,367,0,0" Height="50" Background="#FF0F1A21" Foreground="#FF545C60" BorderThickness="0" FontSize="20" Click="BtnNegateClick"/>
-        <Button x:Name="btn_mc" Content="MC" HorizontalAlignment="Left" VerticalAlignment="Top" Width="60" Height="25" Margin="14,5,0,0" Foreground="#FF545C60" Background="#FF0F1A21" BorderThickness="0" FontSize="17"/>
-        <Button x:Name="btn_mr" Content="MR" HorizontalAlignment="Left" VerticalAlignment="Top" Width="60" Margin="87,5,0,0" Height="25" Foreground="#FF545C60" Background="#FF0F1A21" BorderThickness="0" FontSize="17"/>
-        <Button x:Name="btn_m_add" Content="M+" HorizontalAlignment="Left" VerticalAlignment="Top" Width="60" Margin="159,5,0,0" Height="25" Foreground="#FF545C60" Background="#FF0F1A21" BorderThickness="0" FontSize="17"/>
-        <Button x:Name="btn_m_sub" Content="M-" HorizontalAlignment="Left" VerticalAlignment="Top" Width="60" Margin="232,5,0,0" Height="25" Foreground="#FF545C60" Background="#FF0F1A21" BorderThickness="0" FontSize="17"/>
+        <Button x:Name="btn_mc" Content="MC" HorizontalAlignment="Left" VerticalAlignment="Top" Width="60" Height="25" Margin="14,5,0,0" Foreground="#FF545C60" Background="#FF0F1A21" BorderThickness="0" FontSize="17" Click="BtnMcClick"/>
+        <Button x:Name="btn_mr" Content="MR" HorizontalAlignment="Left" VerticalAlignment="Top" Width="60" Margin="87,5,0,0" Height="25" Foreground="#FF545C60" Background="#FF0F1A21" BorderThickness="0" FontSize="17" Click="BtnMrClick"/>
+        <Button x:Name="btn_m_add" Content="M+" HorizontalAlignment="Left" VerticalAlignment="Top" Width="60" Margin="159,5,0,0" Height="25" Foreground="#FF545C60" Background="#FF0F1A21" BorderThickness="0" FontSize="17" Click="BtnMAddClick"/>
+        <Button x:Name="btn_m_sub" Content="M-" HorizontalAlignment="Left" VerticalAlignment="Top" Width="60" Margin="232,5,0,0" Height="25" Foreground="#FF545C60" Background="#FF0F1A21" BorderThickness="0" FontSize="17" Click="BtnMSubClick"/>
 
         <Button x:Name="btn_clear" Content="CE" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="107,42,0,0" Height="50" Click="BtnClearClick" Foreground="#FF545C60" Background="#FF0F1A21" BorderThickness="0" FontSize="20"/>
         <Button x:Name="btn_clear_all" Content="C" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="197,42,0,0" Height="50" Click="BtnClearAllClick" Foreground="#FF545C60" Background="#FF0F1A21" BorderThickness="0" FontSize="20"/>
         <Button x:Name="btn_del" Content="DEL" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="289,42,0,0" Height="50" Click="BtnDelClick" Foreground="#FF545C60" Background="#FF0F1A21" BorderThickness="0" FontSize="20"/>
-        <Button x:Name="btn_ms_Copy" Content="MS" HorizontalAlignment="Left" VerticalAlignment="Top" Width="60" Margin="304,5,0,0" Height="25" Foreground="#FF545C60" Background="#FF0F1A21" BorderThickness="0" FontSize="17"/>
+        <Button x:Name="btn_ms" Content="MS" HorizontalAlignment="Left" VerticalAlignment="Top" Width="60" Margin="304,5,0,0" Height="25" Foreground="#FF545C60" Background="#FF0F1A21" BorderThickness="0" FontSize="17" Click="BtnMsClick"/>
 
     </Grid>
 </Window>
