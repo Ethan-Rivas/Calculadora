@@ -138,18 +138,21 @@ namespace Calculadora_Parcial1
                 else if (operation_next == "√" || operation_next == "%")
                 {
                     operation_text.Text += operation_next + total_text.Text;
+                    _ = operation_next == "√" ? total_text.Text = this.squaret(Double.Parse(total_text.Text), total).ToString() : total_text.Text = this.porcentage(Double.Parse(total_text.Text), total).ToString();
                     this.Calculate();
                     total = Double.Parse(total_text.Text);
                 }
                 else if (operation_next == "x²")
                 {
                     operation_text.Text += total_text.Text + "²";
+                    total_text.Text = this.pot(Double.Parse(total_text.Text), total).ToString();
                     this.Calculate();
                     total = Double.Parse(total_text.Text);
                 }
                 else if (operation_next == "1/x")
                 {
                     operation_text.Text += "1/" + total_text.Text;
+                    total_text.Text = this.onex(Double.Parse(total_text.Text), total).ToString();
                     this.Calculate();
                     total = Double.Parse(total_text.Text);
                 }
@@ -206,22 +209,22 @@ namespace Calculadora_Parcial1
             switch (operation)
             {
                 case "+":
-                    total_text.Text = (total + Double.Parse(total_text.Text)).ToString();
+                    total_text.Text = this.add(total, Double.Parse(total_text.Text)).ToString();
                     break;
                 case "-":
-                    total_text.Text = (total - Double.Parse(total_text.Text)).ToString();
+                    total_text.Text = this.sub(total, Double.Parse(total_text.Text)).ToString();
                     break;
                 case "*":
-                    total_text.Text = (total * Double.Parse(total_text.Text)).ToString();
+                    total_text.Text = this.mult(total, Double.Parse(total_text.Text)).ToString();
                     break;
                 case "/":
-                    total_text.Text = (total / Double.Parse(total_text.Text)).ToString();
+                    total_text.Text = this.div(total, Double.Parse(total_text.Text)).ToString();
                     break;
                 case "√":
-                    total_text.Text = Math.Sqrt(total).ToString();
+                    total_text.Text = this.squaret(total, Double.Parse(total_text.Text)).ToString();
                     break;
                 case "x²":
-                    total_text.Text = (total * total).ToString();
+                    total_text.Text = this.pot(total, Double.Parse(total_text.Text)).ToString();
                     break;
                 case "1/x":
                     total_text.Text = (1/total).ToString();
@@ -262,6 +265,42 @@ namespace Calculadora_Parcial1
         private void BtnMsClick(object sender, RoutedEventArgs e)
         {
             memory = Double.Parse(total_text.Text);
+        }
+
+        // Funcion de Operaciones
+        private Double add(Double a, Double b)
+        {
+            return a + b;
+        }
+        private Double sub(Double a, Double b)
+        {
+            return a - b;
+        }
+        private Double mult(Double a, Double b)
+        {
+            return a * b;
+        }
+        private Double div(Double a, Double b)
+        {
+            return a / b;
+        }
+        private Double squaret(Double a, Double b)
+        {
+            return Math.Sqrt(a);
+        }
+
+        private Double pot(Double a, Double b)
+        {
+            return a * a;
+        }
+        private Double onex(Double a, Double b)
+        {
+            return 1 / a;
+        }
+
+        private Double porcentage(Double a, Double b)
+        {
+            return a % a;
         }
 
         private void Calculator_KeyDown(object sender, KeyEventArgs e)
