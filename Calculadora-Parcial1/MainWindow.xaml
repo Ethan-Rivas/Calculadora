@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Calculadora_Parcial1"
         mc:Ignorable="d"
         KeyDown="Calculator_KeyDown"
-        Title="MainWindow" Height="581.287" Width="380" ResizeMode="NoResize" SizeToContent="WidthAndHeight" UseLayoutRounding="False" Padding="0,9,0,0" VerticalAlignment="Center" HorizontalAlignment="Center" Background="#FF0F1A21">
+        Title="Calculadora - Ethan Rivas 1.0" Height="581.287" Width="380" ResizeMode="NoResize" SizeToContent="WidthAndHeight" UseLayoutRounding="False" Padding="0,9,0,0" VerticalAlignment="Center" HorizontalAlignment="Center" Background="#FF0F1A21" Icon="calculadora.png">
     <Window.Resources>
         <Style TargetType="Button">
             <Setter Property="Template">
