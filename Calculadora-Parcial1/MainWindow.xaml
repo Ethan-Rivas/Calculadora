@@ -1,4 +1,5 @@
 ﻿<Window x:Class="Calculadora_Parcial1.MainWindow"
+        WindowStartupLocation="CenterScreen"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -37,7 +38,7 @@
         </Grid>
 
         <Button x:Name="btn_div_x" Content="1/x" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Height="50" Margin="14,109,0,0" Click="BtnOperationClick" Foreground="#FF545C60" Background="#FF0F1A21" BorderThickness="0" FontSize="20"/>
-        <Button x:Name="btn_pot" Content="x²" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="107,109,0,0" Height="50" Click="BtnOperationClick" Foreground="#FF545C60" Background="#FF0F1A21" BorderThickness="0" FontSize="20"/>
+        <Button x:Name="btn_pot" Content="x^" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="107,109,0,0" Height="50" Click="BtnOperationClick" Foreground="#FF545C60" Background="#FF0F1A21" BorderThickness="0" FontSize="20"/>
         <Button x:Name="btn_square" Content="√" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="197,109,0,0" Height="50" Click="BtnOperationClick" Foreground="#FF545C60" Background="#FF0F1A21" BorderThickness="0" FontSize="20"/>
 
         <Button x:Name="btn_add" Content="+" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="289,301,0,0" Height="50" Click="BtnOperationClick" Foreground="#FF545C60" Background="#FF0F1A21" BorderThickness="0" FontSize="20"/>

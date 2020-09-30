@@ -6,12 +6,6 @@ using System.Threading.Tasks;
 
 namespace Calculadora_Parcial1
 {
-    /* TODO:
-    * Permitir:
-    * Elevar a la N potencia.
-    * Raíz N de un número.
-    * Extra: Permitir el porcentaje correctamente en sus 3 formas.
-    */
     class Operation
     {
         // Suma
@@ -35,14 +29,14 @@ namespace Calculadora_Parcial1
             return a / b;
         }
         // Raíz
-        public Double squaret(Double a, Double b)
+        public Double squaret(Double times, Double number)
         {
-            return Math.Sqrt(a);
+            return Math.Pow(number, 1.0 / times);
         }
         // Potencia
         public Double pot(Double a, Double b)
         {
-            return a * a;
+            return Math.Pow(a, b);
         }
         // Inverso
         public Double onex(Double a, Double b)
@@ -52,7 +46,7 @@ namespace Calculadora_Parcial1
         // Porcentaje
         public Double porcentage(Double a, Double b)
         {
-            return a % a;
+            return (a * b) / 100;
         }
     }
 }
